@@ -2,8 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/Butterflies and Hedgerows/Butterflies_and_hedgerows.html",
+      "/posts/Working with MapReader/working_with_MapReader.html",
+      "/posts/post-with-code/index.html"
     ]
   }
 ]

@@ -1,0 +1,18 @@
+---
+title: "Working with MapReader: Semi-automatic CNN for semantic segmentation of historic maps"
+author: "William Ward"
+date: "2024-02-07"
+categories: 
+ - Machine Learning
+ - Maps
+---
+
+categories: \[Machine Learning\]\[Maps\]
+
+I have spent some time over the past few months working with MapReader; a convolution neural network (CNN) put together by researchers at the University of Exeter and the Alan Turing Institute trained on and aimed at improving our ability to process historic maps efficiently and at scale. Aimed at being accessible to non-technical researchers, it opens the door to some really exciting new understandings about changes over time documented in historic maps.
+
+For my research it's an exciting tool because it can help us more easily study the large-scale loss of hedgerows in Britain which has had unforeseen negative effects on food security, drought and flooding resistance, green carbon storage and biodiversity. Computer vision approaches to historic map processing have been used for around 40 years, but this is the first time a complex, machine learning model like this has been developed exclusively for this task.
+
+![](images/map_101444356.png)
+
+Above is a map sheet from one of the Ordinate Survey's early mapping campaign of England (\~1900), ...

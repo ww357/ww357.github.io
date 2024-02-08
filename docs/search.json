@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/Working with MapReader/working_with_MapReader.html",
+    "href": "posts/Working with MapReader/working_with_MapReader.html",
+    "title": "Working with MapReader: Semi-automatic CNN for semantic segmentation of historic maps",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "categories: [Machine Learning][Maps]\nI have spent some time over the past few months working with MapReader; a convolution neural network (CNN) put together by researchers at the University of Exeter and the Alan Turing Institute trained on and aimed at improving our ability to process historic maps efficiently and at scale. Aimed at being accessible to non-technical researchers, it opens the door to some really exciting new understandings about changes over time documented in historic maps.\nFor my research it’s an exciting tool because it can help us more easily study the large-scale loss of hedgerows in Britain which has had unforeseen negative effects on food security, drought and flooding resistance, green carbon storage and biodiversity. Computer vision approaches to historic map processing have been used for around 40 years, but this is the first time a complex, machine learning model like this has been developed exclusively for this task.\n\nAbove is a map sheet from one of the Ordinate Survey’s early mapping campaign of England (~1900), …"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ww357.github.io",
+    "objectID": "posts/Butterflies and Hedgerows/Butterflies_and_hedgerows.html",
+    "href": "posts/Butterflies and Hedgerows/Butterflies_and_hedgerows.html",
+    "title": "Exploring the ecological importance of hedgerows for landscape-scale species communities",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 8, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 5, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "In an early attempt to try using machine learning models for spatial data analysis of ecological processes, I put together a rudimentary model that clusters arthropod observation data to compare the location of larger communities to the quality of hedgerow in their surrounding landscape. In hind sight, after reading this paper and talking with my supervisor I realized the methodology fails to fully account for the importance of scale differences in such an ecological relationship, but it was still fascinating to observe clear similarities between the presence of larger, healthier hedgerows around bigger populations of endangered butterflies. If the results from this study stand true, the importance of hedgerows for macro-scale distribution of beneficial arthropod species may now more frequently depend on the quality of hedgerows in their environment rather than a close proximity to natural habitat land cover. This would primarily be because of how little of these habitats are left rather than the the ability of hedgerows to act as a surrogate in their absence.\nHere is the preliminary figure exploring the extent of my dataset compiled using Python in ArcGIS Pro and VScode. The observation data was pulled from iNaturalist using it’s API and the hedgerow data was derived by Broughton et al. (2021) who took advantage of open-source, fine-resolution LiDAR data covering much of Britain’s South West Peninsula.\n\nI clustering the observations with a density-based spatial clustering algorithm (DBSCAN) to identify distinct communities across the peninsula and then ran Spearman’s rank correlation coefficient to try and statistically identify if there was a relationship between community sizes and the lengths of different hedgerow high classes (their height’s have a well-understood correlation to their width and quality as habitats). Here are the results:\n\nUnsurprisingly, the healthier the hedgerow, the more likely it is to support larger insect communities, but what was more surprising is the final row of that table. I similarly measured the quantity of natural habitat around each observations to compare it as a variable in the model, yet surprisingly there was suitability no correlation to larger species communities. Because the measuring of this variable (as an area) differed from how hedgerow was measured (as lengths) I think this result highlighted the issue I previously mentioned with the model.\nI am going to continue working on this approach to better our understanding of the ecological importance of hedgerows, adding more species into the model, adjusting parameters to best capture the relationships and by making sure correlations to landscape features are more realistically assessed.\nPaper mentioned:\nBroughton, R.K., Chetcuti, J., Burgess, M.D., Gerard, F.F. and Pywell, R.F. (2021). A regional-scale study of associations between farmland birds and linear woody networks of hedgerows and trees. Agriculture, Ecosystems & Environment, 310, p.107300. doi:https://doi.org/10.1016/j.agee.2021.107300."
   },
   {
     "objectID": "about.html",
@@ -19,6 +19,13 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ww357.github.io",
+    "section": "",
+    "text": "Exploring the ecological importance of hedgerows for landscape-scale species communities\n\n\n\n\n\n\nModelling\n\n\nEcology\n\n\nHedgerows\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\nFeb 8, 2024\n\n\nWilliam Ward\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with MapReader: Semi-automatic CNN for semantic segmentation of historic maps\n\n\n\n\n\n\nMachine Learning\n\n\nMaps\n\n\n\n\n\n\n\n\n\nFeb 7, 2024\n\n\nWilliam Ward\n\n\n\n\n\n\n\n\n\n\n\n\nIgnore this - it is a test for intergrating code into a blog post\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\nFeb 5, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",

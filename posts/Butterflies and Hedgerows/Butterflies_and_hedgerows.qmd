@@ -1,0 +1,28 @@
+---
+title: "Exploring the ecological importance of hedgerows for landscape-scale species communities"
+author: "William Ward"
+date: "2024-02-08"
+categories: 
+ - Modelling
+ - Ecology
+ - Hedgerows
+ - Machine Learning
+---
+
+In an early attempt to try using machine learning models for spatial data analysis of ecological processes, I put together a rudimentary model that clusters arthropod observation data to compare the location of larger communities to the quality of hedgerow in their surrounding landscape. In hind sight, after reading [this paper](https://www.annualreviews.org/doi/10.1146/annurev-ecolsys-012120-100346) and talking with my supervisor I realized the methodology fails to fully account for the importance of scale differences in such an ecological relationship, but it was still fascinating to observe clear similarities between the presence of larger, healthier hedgerows around bigger populations of endangered butterflies. If the results from this study stand true, the importance of hedgerows for macro-scale distribution of beneficial arthropod species may now more frequently depend on the quality of hedgerows in their environment rather than a close proximity to natural habitat land cover. This would primarily be because of how little of these habitats are left rather than the the ability of hedgerows to act as a surrogate in their absence.
+
+Here is the preliminary figure exploring the extent of my dataset compiled using Python in ArcGIS Pro and VScode. The observation data was pulled from iNaturalist using [it's API](https://www.inaturalist.org/pages/how+can+i+use+it) and the hedgerow data was derived by Broughton et al. (2021) who took advantage of open-source, fine-resolution LiDAR data covering much of Britain's South West Peninsula.
+
+![](images/Study%20Site%20Map%20Stretched%20(PNG).png)
+
+I clustering the observations with a density-based spatial clustering algorithm (DBSCAN) to identify distinct communities across the peninsula and then ran Spearman's rank correlation coefficient to try and statistically identify if there was a relationship between community sizes and the lengths of different hedgerow high classes (their height's have a well-understood correlation to their width and quality as habitats). Here are the results:
+
+![](images/clipboard-1590216314.png)
+
+Unsurprisingly, the healthier the hedgerow, the more likely it is to support larger insect communities, but what was more surprising is the final row of that table. I similarly measured the quantity of natural habitat around each observations to compare it as a variable in the model, yet surprisingly there was suitability no correlation to larger species communities. Because the measuring of this variable (as an area) differed from how hedgerow was measured (as lengths) I think this result highlighted the issue I previously mentioned with the model.
+
+I am going to continue working on this approach to better our understanding of the ecological importance of hedgerows, adding more species into the model, adjusting parameters to best capture the relationships and by making sure correlations to landscape features are more realistically assessed.
+
+Paper mentioned:
+
+Broughton, R.K., Chetcuti, J., Burgess, M.D., Gerard, F.F. and Pywell, R.F. (2021). A regional-scale study of associations between farmland birds and linear woody networks of hedgerows and trees. Agriculture, Ecosystems & Environment, 310, p.107300. doi:<https://doi.org/10.1016/j.agee.2021.107300.>
