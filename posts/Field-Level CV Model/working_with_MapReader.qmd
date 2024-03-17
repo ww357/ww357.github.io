@@ -1,0 +1,28 @@
+---
+title: "Working with MapReader: Semi-automatic CNN for semantic segmentation of historic maps"
+author: "William Ward"
+date: "2024-02-07"
+categories: 
+ - Machine Learning
+ - Maps
+---
+
+categories: \[Machine Learning\]\[Maps\]
+
+I am putting together a new approach to managing the restoration of hedgerows in actively cultivated fields using a computer vision model that identifies change from early 20th century Ordinate Survey maps (2\$\^{nd}\$ six-inch map series). What makes it 'field-level' is the use of a relitively new dataset produced by researchers working with the UK Center for Ecology & Hydrology that is produced to map information of the crop production for individual fields (\[source to the data\](www.ceh.ac.uk/data/ceh-land-cover-plus-crops-2015)). I haveessentially cookie-cuttered out chunks of the old maps using the polygons from this dataset to act as individual images into a convolution neural network (). I have managed to condense the entire process into a single-document pipeline that goes through every step of:
+
+1.  Querying the Library of Scotland's database of historic OS maps (using MapReader Python package)
+2.  Downloading these maps onto the computer's hard drive (MapReader)
+3.  Georeferencing them based on corner coordinates (using GDAL library)
+4.  Joining maps into one large raster(GDAL)
+5.  *Not in pipeline yet: splitting the raster by the polygons of the Crop Plus data.*
+6.  Load in individual patches produced in raster split into MapReader's annotation tool.
+7.  Train ResNet-18 (pre-trained on OS maps by Houssini et al., 2023) CNN
+
+After this was done, I broadcasted the resulting predictions onto the polygon features to visualise the results in ArcGIS Pro,
+
+, loaded them into the MapReader annotation interface and model,
+
+with the use of computer vision to read historic OS maps.
+
+MOVE TO PAPER: This model is not so much identifying the exact dimentions of hedgerow loss but instead documenting the vague locality of the spatial and temporal dilution of agricultural spaces across England. Being segmented by only certain fields in the Crop Plus dataset, large portions of exinct or extant hedgerow network lay or currently lies.
