@@ -1,5 +1,5 @@
 ---
-title: "Working with MapReader: Semi-automatic CNN for semantic segmentation of historic maps"
+title: "Exploring infield hedgerow loss using CV to read historic OS maps"
 author: "William Ward"
 date: "2024-02-07"
 categories: 
