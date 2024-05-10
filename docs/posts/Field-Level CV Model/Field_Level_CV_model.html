@@ -155,21 +155,32 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>categories: [Machine Learning][Maps]</p>
-<p>I am putting together a new approach to managing the restoration of hedgerows in actively cultivated fields using a computer vision model that identifies change from early 20th century Ordinate Survey maps (2$^{nd}$ six-inch map series). What makes it ‘field-level’ is the use of a relatively new dataset produced by researchers working with the UK Center for Ecology &amp; Hydrology that is produced to map information of the crop production for individual fields ([source to the data](www.ceh.ac.uk/data/ceh-land-cover-plus-crops-2015)). I haveessentially cookie-cuttered out chunks of the old maps using the polygons from this dataset to act as individual images into a convolution neural network (). I have managed to condense the entire process into a single-document pipeline that goes through every step of:</p>
+<p>I am putting together a new approach to managing the restoration of hedgerows in actively cultivated fields using a computer vision model that identifies change from early 20th century Ordinate Survey maps (second edition, six-inch map series). What makes it ‘field-level’ is the use of a relatively new dataset produced by researchers working with the UK Center for Ecology &amp; Hydrology that is produced to map information of the crop production for individual fields (<a href="www.ceh.ac.uk/data/ceh-land-cover-plus-crops-2015">source to the data</a>). I have essentially cookie-cuttered out chunks of the old maps using the polygons from this dataset to act as individual images into a convolution neural network (CNN). I have managed to condense the entire process into a single-document pipeline that goes through every step of:</p>
 <ol type="1">
-<li>Querying the Library of Scotland’s database of historic OS maps (using MapReader Python package)</li>
-<li>Downloading these maps onto the computer’s hard drive (MapReader)</li>
+<li>Querying the Library of Scotland’s <a href="https://maps.nls.uk/os/6inch-england-and-wales/">database</a> of historic OS maps (using MapReader Python package)</li>
+<li>Downloading these maps onto the computer’s hard drive (Using <a href="https://living-with-machines.github.io/MapReader/">MapReader</a>)</li>
 <li>Georeferencing them based on corner coordinates (using GDAL library)</li>
 <li>Joining maps into one large raster(GDAL)</li>
 <li><em>Not in pipeline yet: splitting the raster by the polygons of the Crop Plus data.</em></li>
 <li>Load in individual patches produced in raster split into MapReader’s annotation tool.</li>
 <li>Train ResNet-18 (pre-trained on OS maps by Houssini et al., 2023) CNN</li>
 </ol>
-<p>After this was done, I broadcasted the resulting predictions onto the polygon features to visualise the results in ArcGIS Pro, as seen below:</p>
-<p>PUT IN PICTURE OF RESULTS</p>
+<p>Here is a visualisation of this pipeline:</p>
+<p><img src="images/clipboard-1658302361.png" class="img-fluid"></p>
+<section id="results" class="level3">
+<h3 class="anchored" data-anchor-id="results">Results:</h3>
+<p>Here are the county-level results after bad predictions were omitted and the Yorkshire study site was removed (predictions were entirely incorrect):</p>
+<p><img src="images/clipboard-470819174.png" class="img-fluid"></p>
+<p>I then did some analysis on the difference between the size of fields that had and had not experienced hedgerow loss, and he difference between arable vs pastoral fields. The results (below) were as expected, with the largest fields experiencing hedgerow loss because of their dilation by removing boundaries, whiile arable farmland experienced greater instances of hedgerow loss. The latter was expected because arable land is more prone to expansion for bigger fields that can be managed more easily by bigger machinery. These findings were less about making testing these prior assumptions, and more about seeing if the model’s predictions aligned with them for verification of success.</p>
+<p><img src="images/clipboard-2460159056.png" class="img-fluid"></p>
+<p>After these results were obtained, I broadcasted the resulting predictions onto the polygon features to visualise the results in ArcGIS Pro. I will publish this as an interactive map in due course.</p>
+</section>
+<section id="appendix-table-of-finer-details-of-the-county-level-results" class="level3">
+<h3 class="anchored" data-anchor-id="appendix-table-of-finer-details-of-the-county-level-results">Appendix (table of finer details of the county-level results):</h3>
+<p><img src="images/clipboard-3160118829.png" class="img-fluid"></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
