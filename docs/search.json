@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "ww357.github.io",
     "section": "",
-    "text": "Exploring the ecological importance of hedgerows for landscape-scale species communities\n\n\n\n\n\n\nModelling\n\n\nEcology\n\n\nHedgerows\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\nFeb 8, 2024\n\n\nWilliam Ward\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with MapReader: Semi-automatic CNN for semantic segmentation of historic maps\n\n\n\n\n\n\nMachine Learning\n\n\nMaps\n\n\n\n\n\n\n\n\n\nFeb 7, 2024\n\n\nWilliam Ward\n\n\n\n\n\n\n\n\n\n\n\n\nIgnore this - it is a test for intergrating code into a blog post\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\nFeb 5, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\nNo matching items"
+    "text": "Exploring the ecological importance of hedgerows for landscape-scale species communities\n\n\n\n\n\n\nModelling\n\n\nEcology\n\n\nHedgerows\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\nFeb 8, 2024\n\n\nWilliam Ward\n\n\n\n\n\n\n\n\n\n\n\n\nExploring infield hedgerow loss using CV to read historic OS maps\n\n\n\n\n\n\nMachine Learning\n\n\nMaps\n\n\n\n\n\n\n\n\n\nFeb 7, 2024\n\n\nWilliam Ward\n\n\n\n\n\n\n\n\n\n\n\n\nWorking with MapReader: Semi-automatic CNN for semantic segmentation of historic maps\n\n\n\n\n\n\nMachine Learning\n\n\nMaps\n\n\n\n\n\n\n\n\n\nFeb 7, 2024\n\n\nWilliam Ward\n\n\n\n\n\n\n\n\n\n\n\n\nIgnore this - it is a test for intergrating code into a blog post\n\n\n\n\n\n\ncode\n\n\n\n\n\n\n\n\n\nFeb 5, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -33,5 +33,12 @@
     "title": "Post With Code",
     "section": "",
     "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/Field-Level CV Model/Field_Level_CV_model.html",
+    "href": "posts/Field-Level CV Model/Field_Level_CV_model.html",
+    "title": "Exploring infield hedgerow loss using CV to read historic OS maps",
+    "section": "",
+    "text": "categories: [Machine Learning][Maps]\nI am putting together a new approach to managing the restoration of hedgerows in actively cultivated fields using a computer vision model that identifies change from early 20th century Ordinate Survey maps (2$^{nd}$ six-inch map series). What makes it ‘field-level’ is the use of a relatively new dataset produced by researchers working with the UK Center for Ecology & Hydrology that is produced to map information of the crop production for individual fields ([source to the data](www.ceh.ac.uk/data/ceh-land-cover-plus-crops-2015)). I haveessentially cookie-cuttered out chunks of the old maps using the polygons from this dataset to act as individual images into a convolution neural network (). I have managed to condense the entire process into a single-document pipeline that goes through every step of:\n\nQuerying the Library of Scotland’s database of historic OS maps (using MapReader Python package)\nDownloading these maps onto the computer’s hard drive (MapReader)\nGeoreferencing them based on corner coordinates (using GDAL library)\nJoining maps into one large raster(GDAL)\nNot in pipeline yet: splitting the raster by the polygons of the Crop Plus data.\nLoad in individual patches produced in raster split into MapReader’s annotation tool.\nTrain ResNet-18 (pre-trained on OS maps by Houssini et al., 2023) CNN\n\nAfter this was done, I broadcasted the resulting predictions onto the polygon features to visualise the results in ArcGIS Pro, as seen below:\nPUT IN PICTURE OF RESULTS"
   }
 ]
