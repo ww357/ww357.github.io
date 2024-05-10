@@ -1,8 +1,8 @@
 {
-  "hash": "148b1b5367db455b6a4aa81fc43838d9",
+  "hash": "2acc15f0201ffc9e8bd96c5bd8c5b8be",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Post With Code\"\nauthor: \"Harlow Malloc\"\ndate: \"2024-02-08\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\n\nThis is a post with executable code.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
+    "markdown": "---\ntitle: \"Ignore this - it is a test for intergrating code into a blog post\"\nauthor: \"Harlow Malloc\"\ndate: \"2024-02-05\"\ncategories: [code]\nimage: \"image.jpg\"\ndraft: true\n---\n\n\nThis is a post with executable code.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
