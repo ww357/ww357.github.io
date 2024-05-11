@@ -1,0 +1,47 @@
+---
+title: "Texas Wilflife"
+author: "William Ward"
+date: "2024-05-10"
+categories: 
+- Media
+- Creative Project
+draft: true
+---
+
+### Gulf Prairies ecoregion within the North American Coastal Plain located along the south boarder of Texas.
+
+The forest's here are extremely productive boasting a beautiful ensemble of species that make a real racket. I have attached audio files to help put you there; it's a beautiful sound. Take a listen while scrolling through some of the flaura, fauna, and funga I've documented\~\~\~
+
+Audio:
+
+Woodpecker: ![](Audio/Woodpecker.m4a)
+
+<html>
+
+<header><u>hello</u></header>
+
+</html>
+
+![](photos/DSC_0291_armadillo_edit.JPG){fig-align="center" width="510"}
+
+::: {style="display: flex; justify-content: center;"}
+<img src="photos/DSC_0304.JPG" alt="Picture 1" style="width: 250px; margin-right: 10px;"/> <img src="photos/DSC_0302.JPG" alt="Picture 2" style="width: 250px;"/>
+:::
+
+![](photos/DSC_0306.JPG){fig-align="center" width="510"}
+
+![](photos/DSC_0312.JPG){fig-align="center" width="510"}
+
+![](photos/DSC_0282.JPG){fig-align="center" width="510"}
+
+![](photos/DSC_0287.JPG){fig-align="center" width="510"}
+
+![](photos/DSC_0317.JPG){fig-align="center" width="510"}
+
+![](photos/DSC_0307.JPG){fig-align="center" width="510"}
+
+![](photos/DSC_0295.JPG){fig-align="center" width="510"}
+
+::: {style="display: flex; justify-content: center;"}
+<img src="photos/DSC_0304B.JPG" alt="Picture 1" style="width: 250px; margin-right: 10px;"/> <img src="photos/DSC_0305.JPG" alt="Picture 2" style="width: 250px;"/>
+:::
