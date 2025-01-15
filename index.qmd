@@ -1,5 +1,5 @@
 ---
-title: "ww357.github.io"
+title: "Spatial Reconstruction of Historic Landscape Ecology"
 listing:
   contents: posts
   sort: "date desc"
