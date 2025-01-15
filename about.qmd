@@ -6,10 +6,10 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com/in/william-ward-463493245
+      href: https://linkedin.comwww.linkedin.com/in/william-ward-463493245
     - icon: github
       text: Github
       href: https://github.com/ww357
 ---
 
-About this blog
+A website of the current projects I am working on for my doctoral research at the University of Exeter.
